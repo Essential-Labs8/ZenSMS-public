@@ -1,0 +1,15 @@
+name: Auto Close Pull Requests
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  close-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close PR
+        uses: superbrothers/close-pull-request@v3
+        with:
+          comment: >
+            Thank you for your interest! This repository is used **exclusively for issue tracking**. 
+            We do not accept pull requests here. Please see our CONTRIBUTING.md for more details.
