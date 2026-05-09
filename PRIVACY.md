@@ -1,6 +1,6 @@
 # ZenSMS Privacy Policy
 
-**Last updated: 24 February 2026**
+**Last updated: 10 May 2026**
 
 ## About ZenSMS
 
@@ -21,7 +21,7 @@ ZenSMS is designed with privacy as a core principle. We believe your messages ar
 
 - Message content
 - Contact information
-- Phone numbers
+- Phone numbers in readable form (diagnostic bundles use one-way hashes only — see MMS Diagnostic Tools)
 - Location data
 - Usage analytics
 - Personal identifiers
@@ -41,6 +41,16 @@ ZenSMS is designed with privacy as a core principle. We believe your messages ar
 - No advertising SDKs
 - No analytics SDKs
 - No crash reporting SDKs
+
+## MMS Diagnostic Tools
+ZenSMS includes optional diagnostic tools (Settings → Diagnostics) to help troubleshoot message delivery issues. These are entirely opt-in:
+- Nothing is transmitted automatically — all data stays on your device
+- Diagnostic bundles are stored temporarily in your device's cache and auto-deleted after 24 hours
+- Bundles may include: device model, Android version, carrier name, app settings, network state, permission states, and aggregate message counts (no message content)
+- Phone numbers are one-way hashed (SHA-256 with a random per-device salt) — the original numbers cannot be recovered from the hash
+- Message bodies, contact names, and attachment content are never included
+- Bundles are only shared if you explicitly tap the Share button
+- If you share a bundle with us for support, we use it only to diagnose your issue and do not retain it
 
 ## Premium Features
 
@@ -66,6 +76,5 @@ For privacy concerns or questions, please email zensmsapp@gmail.com
 
 ## 🔒 Privacy Summary
 
-**ZenSMS is a product of Essential Labs 8. It is 100% local-only. Your messages never leave your device. No accounts, no cloud, no tracking. Simple and private.**
-
+**ZenSMS is a product of Essential Labs 8. It is 100% local-only. Your messages never leave your device. No accounts, no cloud, no tracking. Optional diagnostic tools are opt-in, local-only, and share only what you approve. Simple and private.**
 ---
